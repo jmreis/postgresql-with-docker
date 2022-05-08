@@ -33,30 +33,32 @@ Before starting, make sure you've met the following requirements:
 
 To install, follow these steps using the terminal:
 
-    1- Clone the repository:
+1- Clone the repository:
 
-    ```bash
-    git clone https://github.com/jmreis/postgresql-with-docker.git
-    ```
+```bash
+git clone https://github.com/jmreis/postgresql-with-docker.git
+```
 
-    2- Change to project directory:
+2- Change to project directory:
 
-    ```bash
-    cd postgresql-with-docker
-    ```
+```bash
+cd postgresql-with-docker
+```
 
-    3- Create your .env file:
-    ```bash
-    touch .env
-    ```
+3- Create your .env file:
 
-    4- Setting variables on .env:
-    ```bash
-    POSTGRES-USERNAME="your-username"
-    POSTGRES-PASSWORD="your-password"
-    PGADMIN-DEFAULT-EMAIL="your-email"
-    PGADMIN-DEFAULT-PASSWORD="your-password"
-    ```
+```bash
+touch .env
+```
+
+4- Setting variables on .env:
+
+```bash
+POSTGRES-USERNAME="your-username"
+POSTGRES-PASSWORD="your-password"
+PGADMIN-DEFAULT-EMAIL="your-email"
+PGADMIN-DEFAULT-PASSWORD="your-password"
+```
 
 
 ## ☕ Using
@@ -64,9 +66,10 @@ To install, follow these steps using the terminal:
 To use, follow these steps:
 
 1- Build and run the environment:
-    ```bash
-    docker-compose up --build -d
-    ```
+
+```bash
+docker-compose up --build -d
+```
 
 2- Open the PgAdmin on your browser with http://localhost:15435
 
