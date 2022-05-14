@@ -23,9 +23,8 @@ version: '3'
 services:
   postgres-compose:
     image: postgres
-    environment:
-      POSTGRES_USERNAME: "${POSTGRES-USERNAME}"
-      POSTGRES_PASSWORD: "${POSTGRES-PASSWORD}"
+    env_file:
+      - postgres-compose.env
     ports:
       - "5432:5432"
     volumes:
@@ -35,9 +34,8 @@ services:
 
   pgadmin-compose:
     image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "${PGADMIN-DEFAULT-EMAIL}"
-      PGADMIN_DEFAULT_PASSWORD: "${PGADMIN-DEFAULT-PASSWORD}"
+    env_file:
+      - pgadmin-compose.env
     ports:
       - "15435:80"
     depends_on:

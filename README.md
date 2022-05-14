@@ -45,21 +45,31 @@ git clone https://github.com/jmreis/postgresql-with-docker.git
 cd postgresql-with-docker
 ```
 
-3- Create your .env file:
+3- Create yours .env files:
 
 ```bash
-touch .env
+touch postgres.env
+```
+
+```bash
+touch pgadmin.env
 ```
 
 4- Setting variables on .env:
 
+postgres.env
+
 ```bash
-POSTGRES-USERNAME="your-username"
-POSTGRES-PASSWORD="your-password"
-PGADMIN-DEFAULT-EMAIL="your-email"
-PGADMIN-DEFAULT-PASSWORD="your-password"
+POSTGRES-USERNAME=your-username
+POSTGRES-PASSWORD=your-password
 ```
 
+pgadmin.env
+
+```bash
+PGADMIN-DEFAULT-EMAIL=your-email
+PGADMIN-DEFAULT-PASSWORD=your-password
+```
 
 ## ☕ Using
 
@@ -77,12 +87,12 @@ docker-compose up --build -d
 
 3- For stop the services use:
     ```bash
-    docker-compose down
+    docker-compose stop
     ```
 
 4- For start the service use:
     ```bash
-    docker-composer up
+    docker-composer start
     ```
 
 ## 📫 Contributing
